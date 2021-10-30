@@ -1,0 +1,14 @@
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\bin\Debug\Prime_Number.exe.config
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\bin\Debug\Prime_Number.exe.manifest
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\bin\Debug\Prime_Number.application
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\bin\Debug\Prime_Number.exe
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\bin\Debug\Prime_Number.pdb
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\obj\Debug\Prime_Number.csproj.AssemblyReference.cache
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\obj\Debug\Prime_Number.Properties.Resources.resources
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\obj\Debug\Prime_Number.Win_Prime.resources
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\obj\Debug\Prime_Number.csproj.GenerateResource.cache
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\obj\Debug\Prime_Number.csproj.CoreCompileInputs.cache
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\obj\Debug\Prime_Number.exe.manifest
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\obj\Debug\Prime_Number.application
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\obj\Debug\Prime_Number.exe
+C:\Users\fabga\source\repos\Prime_Number\Prime_Number\obj\Debug\Prime_Number.pdb
