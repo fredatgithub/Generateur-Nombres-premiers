@@ -85,7 +85,7 @@ namespace Prime_Number
       // Aucun nombre pair a part 2 n'est premier
       int PosX = 2;
       mynum = myIntArray[PosX, 0];
-      for (int PosMultiple = PosX + mynum; PosMultiple < Array_Length; PosMultiple = PosMultiple + mynum)
+      for (int PosMultiple = PosX + mynum; PosMultiple < Array_Length; PosMultiple += mynum)
       {
         myIntArray[PosMultiple, 1] = 0;
       }
@@ -93,7 +93,7 @@ namespace Prime_Number
       // Puis on se positionne sur le nombre trois en sautant tout les nombre pairs qui ne seront jamais premiers. Le multiple d'un nombre pair etant aussi toujours un nombre pair donc NON premier. 
       // C'est un optimisation non indispensable mais ca permet d'aller plus vite.
 
-      for (PosX = 3; PosX < Array_Length; PosX = PosX + 2)
+      for (PosX = 3; PosX < Array_Length; PosX += 2)
       {
         mynum = myIntArray[PosX, 0];
 
@@ -210,14 +210,14 @@ namespace Prime_Number
       // On traite a part dans un premier temps les multiples du nombre 2 ( les nombres pairs)
       // Le nombre 2 est le seul nombre premier pair.
       // Aucun nombre pair a part 2 n'est premier
-      for (int PosMultiple = 4; PosMultiple < myBitsArray.Length; PosMultiple = PosMultiple + 2)
+      for (int PosMultiple = 4; PosMultiple < myBitsArray.Length; PosMultiple += 2)
       {
         myBitsArray[PosMultiple] = false;
       }
 
       // Puis on se positionne sur le nombre trois en sautant tout les nombre pairs qui ne seront jamais premiers. Le multiple d'un nombre pair etant aussi toujours un nombre pair donc NON premier. 
       // C'est un optimisation non indispensable mais ca permet d'aller plus vite.
-      for (int PosX = 3; PosX < myBitsArray.Length; PosX = PosX + 2)
+      for (int PosX = 3; PosX < myBitsArray.Length; PosX += 2)
       {
         // Ici aussi une optimisation le multiple d'un nombre impair est une fois sur deux un nombre pair.
         // Or un nombre pair etant un multiple du nombre deux il avait été deja flagué, pas la peine de le faire une deuxieme fois.  

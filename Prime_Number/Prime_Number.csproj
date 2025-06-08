@@ -102,7 +102,6 @@
     <EmbeddedResource Include="Win_Prime.resx">
       <DependentUpon>Win_Prime.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Prime_Number_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
