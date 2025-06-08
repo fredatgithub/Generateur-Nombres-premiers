@@ -10,7 +10,6 @@ namespace Prime_Number
 {
   public partial class Win_Prime : Form
   {
-
     public Win_Prime()
     {
       InitializeComponent();
@@ -135,9 +134,12 @@ namespace Prime_Number
       Txt_nbprime.Text = nbprime.ToString();
 
       // On affiche une boite de dialogue de sauvegarde à l'ecran pour specifier le fichier à sauvegarder.
-      SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-      saveFileDialog1.Filter = "Text|*.txt";
-      saveFileDialog1.Title = "Sauvegarde de la liste des nombres premiers au format csv.";
+      SaveFileDialog saveFileDialog1 = new SaveFileDialog
+      {
+        Filter = "Text|*.txt",
+        Title = "Sauvegarde de la liste des nombres premiers au format csv."
+      };
+
       saveFileDialog1.ShowDialog();
 
       // Si le nom de fichier n'est pas vide on crée le fichier pour la sauvegarde du resultat.
@@ -256,9 +258,12 @@ namespace Prime_Number
       Txt_nbprime.Text = nbprime.ToString();
 
       // On affiche une boite de dialogue de sauvegarde à l'ecran pour specifier le fichier à sauvegarder.
-      SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-      saveFileDialog1.Filter = "Text|*.txt";
-      saveFileDialog1.Title = "Sauvegarde de la liste des nombres premiers au format csv.";
+      var saveFileDialog1 = new SaveFileDialog
+      {
+        Filter = "Text|*.txt",
+        Title = "Sauvegarde de la liste des nombres premiers au format csv."
+      };
+
       saveFileDialog1.ShowDialog();
 
       // Si le nom de fichier n'est pas vide on crée le fichier pour la sauvegarde du resultat.
@@ -318,7 +323,7 @@ namespace Prime_Number
         var3 /= 2;
         var2++;
       }
-      
+
       for (int rec = 0; rec < testnumLog; rec++)
       {
         var1 = rnd.Next(2, (int)testnum - 1);
@@ -331,10 +336,10 @@ namespace Prime_Number
           if (num == 1) return false;
           if (num == testnum - 1) break;
         }
-      
+
         if (num != testnum - 1) return false;
       }
-      
+
       return true;
     }
 
