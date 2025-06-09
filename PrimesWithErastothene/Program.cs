@@ -20,7 +20,7 @@ namespace PrimesWithErastothene
     static List<int> CribleEratosthene(int number)
     {
       // Utilisation de BitArray pour économiser la mémoire
-      BitArray estPremier = new BitArray(number + 1, true);
+      var estPremier = new BitArray(number + 1, true);
 
       for (int i = 2; i * i <= number; i++)
       {
@@ -33,7 +33,7 @@ namespace PrimesWithErastothene
         }
       }
 
-      List<int> resultats = new List<int>();
+      var resultats = new List<int>();
       for (int i = 2; i <= number; i++)
       {
         if (estPremier[i])
