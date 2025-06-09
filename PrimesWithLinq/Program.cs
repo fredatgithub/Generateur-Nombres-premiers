@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 
 namespace PrimesWithLinq
@@ -39,7 +40,7 @@ namespace PrimesWithLinq
     private static void SavePrimesToFile(ParallelQuery<int> primes, string filename)
     {
       // Sauvegarde les nombres premiers dans un fichier texte avec un nombre par ligne
-      using (var writer = new System.IO.StreamWriter(filename))
+      using (var writer = new StreamWriter(filename))
       {
         foreach (var prime in primes.OrderBy(i => i))
         {
