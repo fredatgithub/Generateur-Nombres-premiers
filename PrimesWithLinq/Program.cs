@@ -13,8 +13,8 @@ namespace PrimesWithLinq
       sw.Start();
 
       int minimumNumber = 2;
-      int maximumNumber = 1_000_000; // retourne 78 498 en ~1 ms
-      //int maximumNumber = int.MaxValue; // int.MaxValue = 2 147 483 647
+      //int maximumNumber = 1_000_000; // retourne 78 498 en ~1 ms
+      int maximumNumber = int.MaxValue; // int.MaxValue = 2 147 483 647
 
       var primes = from n in Enumerable.Range(minimumNumber, maximumNumber - minimumNumber).AsParallel()
                    where Enumerable.Range(1, (int)Math.Sqrt(n)).All(v => v == 1 || n % v != 0)
