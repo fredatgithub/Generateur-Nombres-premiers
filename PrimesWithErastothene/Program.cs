@@ -9,7 +9,7 @@ namespace PrimesWithErastothene
     static void Main()
     {
       // Limitez la valeur pour éviter l'OutOfMemoryException
-      int endNumber = 100_000_000; // 100 millions, ajustez selon vos besoins et capacités
+      int endNumber = 200_000_000; // 100 millions, ajustez selon vos besoins et capacités
       List<int> nombresPremiers = CribleEratosthene(endNumber);
       Console.WriteLine($"Nombres premiers ≤ {endNumber} :");
       Console.WriteLine(string.Join(", ", nombresPremiers));
