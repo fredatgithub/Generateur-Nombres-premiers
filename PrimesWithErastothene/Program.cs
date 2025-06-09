@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace PrimesWithErastothene
@@ -7,8 +8,8 @@ namespace PrimesWithErastothene
   {
     static void Main()
     {
-      //Console.Write("Entrez un entier N > 1 : ");
-      int endNumber = int.MaxValue;
+      // Limitez la valeur pour éviter l'OutOfMemoryException
+      int endNumber = 100_000_000; // 100 millions, ajustez selon vos besoins et capacités
       List<int> nombresPremiers = CribleEratosthene(endNumber);
       Console.WriteLine($"Nombres premiers ≤ {endNumber} :");
       Console.WriteLine(string.Join(", ", nombresPremiers));
@@ -18,12 +19,9 @@ namespace PrimesWithErastothene
 
     static List<int> CribleEratosthene(int number)
     {
-      // Initialisation du tableau de booléens
-      bool[] estPremier = new bool[number + 1];
-      for (int i = 2; i <= number; i++)
-        estPremier[i] = true;
+      // Utilisation de BitArray pour économiser la mémoire
+      BitArray estPremier = new BitArray(number + 1, true);
 
-      // Application du crible
       for (int i = 2; i * i <= number; i++)
       {
         if (estPremier[i])
@@ -35,12 +33,13 @@ namespace PrimesWithErastothene
         }
       }
 
-      // Construction de la liste des nombres premiers
       List<int> resultats = new List<int>();
       for (int i = 2; i <= number; i++)
       {
         if (estPremier[i])
+        {
           resultats.Add(i);
+        }
       }
 
       return resultats;
